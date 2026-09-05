@@ -41,7 +41,7 @@
   .steps { margin: 14px 0; }
   .step { margin-bottom: 18px; }
   .step-label { font-weight: 600; color: var(--green); font-size: 0.9rem; margin-bottom: 6px; }
-  .step img { max-width: 100%; border-radius: 6px; border: 1px solid var(--border); }
+  .step img { width: 100%; border-radius: 6px; border: 1px solid var(--border); display: block; margin-top: 8px; }
   .chevron { margin-left: auto; font-size: 1.1rem; transition: transform 0.2s; }
   .card.open .chevron { transform: rotate(180deg); }
   footer { text-align: center; color: #aaa; font-size: 0.8rem; padding: 32px 0 16px; }
@@ -223,7 +223,7 @@
         <div class="chevron">▼</div>
       </div>
       <div class="card-body">
-        <p>Use this form to either request the CBRE data team pull your matrix, or to upload your matrix directly.</p>
+        <p>Use this form to request a matrix update or upload your matrix file. Due to the public exporter's 50,000-line limit, full matrix extracts must be pulled by the CBRE data team via the SQL exporter and delivered directly to you. If you require a full pull, select <strong>Pull my matrix</strong> and our team will coordinate with CBRE data on your behalf.</p>
         <div class="needs">
           <strong>📋 What you'll need:</strong>
           <ul>
