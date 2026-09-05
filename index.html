@@ -41,7 +41,7 @@
   .steps { margin: 14px 0; }
   .step { margin-bottom: 18px; }
   .step-label { font-weight: 600; color: var(--green); font-size: 0.9rem; margin-bottom: 6px; }
-  .step img { width: 100%; border-radius: 6px; border: 1px solid var(--border); display: block; margin-top: 8px; cursor: zoom-in; transition: opacity 0.15s; }
+  .step img { width: 100%; border-radius: 6px; border: 1px solid var(--border); display: block; margin-top: 8px; cursor: zoom-in; }
   .chevron { margin-left: auto; font-size: 1.1rem; transition: transform 0.2s; }
   .card.open .chevron { transform: rotate(180deg); }
   footer { text-align: center; color: #aaa; font-size: 0.8rem; padding: 32px 0 16px; }
@@ -50,14 +50,6 @@
   #lb { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out; }
   #lb.on { display:flex; }
   #lb img { max-width:92vw; max-height:92vh; border-radius:8px; box-shadow:0 8px 40px rgba(0,0,0,0.6); }
-
-  /* Matrix cards full-width with large screenshots */
-  .card.matrix { grid-column: 1 / -1; }
-  .matrix .card-body { display: none; }
-  .matrix.open .card-body { display: block; }
-  .matrix .steps { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 12px; }
-  .matrix .step { margin-bottom: 0; }
-  .matrix .step img { min-height: 260px; object-fit: contain; background: #f0f0f0; width: 100%; cursor: zoom-in; border-radius: 6px; border: 1px solid #ddd; }
 </style>
 
 <header>
@@ -175,7 +167,7 @@
     </div>
 
     <!-- PPM Matrix Update -->
-    <div class="card matrix" onclick="toggle(this)">
+    <div class="card" onclick="toggle(this)">
       <div class="card-header">
         <div class="card-icon">📊</div>
         <div>
@@ -226,7 +218,7 @@
     </div>
 
     <!-- CBRE REM Matrix Update -->
-    <div class="card matrix" onclick="toggle(this)">
+    <div class="card" onclick="toggle(this)">
       <div class="card-header">
         <div class="card-icon">📊</div>
         <div>
