@@ -1,5 +1,20 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CBRE Request Intake</title>
+<script>
+(function() {
+  var correct = '53cbre';
+  if (sessionStorage.getItem('ftb_auth') !== correct) {
+    var input = prompt('Enter password to access this portal:');
+    if (input !== correct) {
+      document.addEventListener('DOMContentLoaded', function() {
+        document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:Segoe UI,sans-serif;color:#555;font-size:1.1rem;">Access denied. Please refresh and try again.</div>';
+      });
+      return;
+    }
+    sessionStorage.setItem('ftb_auth', correct);
+  }
+})();
+</script>
 <style>
   :root {
     --green: #006A4D;
